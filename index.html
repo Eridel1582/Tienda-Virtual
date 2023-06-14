@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Tienda icon" type="png" href="img/icons/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c265ea686f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    
+    <title>Tienda virtual</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #a155f7;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="img/icons/logo.png" alt="Bootstrap" width="30" height="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Documetación</a></li>
+                            <li><a class="dropdown-item" href="#">Encuentranos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Acerca de</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href=""><img src="img/icons/twitter.png" width="17" height="17"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href=""><img src="img/icons/facebook.png" width="17" height="17"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href=""><img src="img/icons/instagram.png" width="17" height="17"></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="icon-menu">
+        <img src="img/icons/option.png" id="icon-menu">
+    </div>
+
+    <div class="cont-menu active" id="menu">
+        <h2>Carrito</h2>
+        <ul id="listacarrito">
+            
+        </ul>
+        <button type="button" class="btn btn-outline-light" id="Comprar" value="">Comprar</button>
+    </div>
+    <template id="template2">
+            <li>
+                <img src="" id="img-carrito" class="img-carrito">
+                <div id="nom-car" class="nom-car"></div>
+                <div style="display: flex; padding-left: 10%;"><img src="img/icons/iconmod.png" width="15px" height="15px" style="margin-top: 5px;"><div id="pre-car"></div></div>
+                <div id="cantidad-car"></div>
+                <button class=" btn fa-solid fa-trash-can fa-lg" id="eliminar-car" value=" " style="margin-left: 35%; width: 50px; height: 32px;"></button>
+            </li>
+    </template>
+    
+    <div class="container overflow-hidden text-center">
+        <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3" id="lista">
+        </div>
+    </div>
+    
+    <template id="template">
+        <div class="col p-3" style="background-color:#efd2ff">
+            <div class="p-3" style="border-style:initial;" name="todo">
+                <img id="img" class="img-template" width="100%" height="50%">
+                <div id="nom"></div>
+                <div style="display: flex; padding-left: 40%; font-family: 'Times New Roman', Times, serif; font-size: 11px;"> 
+                    <img src="img/icons/iconmod.png" width="15px" height="15px" style="margin-top: 5px;"><div id="pre" style="margin-top: 5px;"> </div>
+                </div>
+                <div style="display: flex; padding-left: 35%; font-size: 10px; margin-top: 5px;">Cantidad: <div id="cantidad" style="font-size: 10px;"></div></div>
+                <button type="button" class="btn btnagregar fa-solid fa-cart-shopping" id="agregar" value="" style="color: #b62eff;">
+                    Agregar 
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="js/data/abrir.js"></script>
+</body>
+
+</html>
